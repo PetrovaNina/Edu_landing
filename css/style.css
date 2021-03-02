@@ -53,7 +53,7 @@ main {
 }
 
 .container {
-  max-width: 1020px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
@@ -62,7 +62,7 @@ main {
   gap: 30px;
 }
 
-.education-container, .contacts-container {
+.education-container {
   flex-direction: column;
 }
 
@@ -117,6 +117,7 @@ a:not(.btn):visited {
   font-weight: bold;
   text-transform: uppercase;
   color: #ffffff;
+  border: none;
   background-color: #382d78;
 }
 
@@ -263,7 +264,6 @@ a:not(.btn):visited {
 
 .education-table strong {
   font-size: 1.2em;
-  color: #000000;
 }
 
 .education-table .first {
@@ -274,6 +274,66 @@ a:not(.btn):visited {
   width: 190px;
 }
 
+/*  =============== Contacts section styles ===============*/
+
+.contacts-heading {
+  flex: 1 0 100%;
+}
+
+.contacts-form {
+  flex: 0 1 610px;
+  display: inline-block;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 19% 81%;
+  align-items: baseline;
+  margin-bottom: 25px;
+}
+
+.form-item-title {
+  text-align: right;
+  padding-right: 15px;
+  padding-bottom: 0.5em;
+}
+
+.form-item-title.gender {
+  margin: 0;
+}
+
+.form-item-field:not(.radio), .contacts-form-textarea {
+  padding: 15px 20px;
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: top;
+  border: 2px solid #a7a7a7;
+}
+
+.form-item-field label {
+  margin: 10px;
+}
+
+.contacts-form-textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.contacts-instruction {
+  width: 320px;
+}
+
+.contacts-instruction-heading {
+  margin: 0;
+  padding-bottom: 1.1em;
+  font-size: 1.2em;
+}
+
+.contacts-instruction-description.alert {
+  padding-top: 0.6em;
+  padding-bottom: 0;
+}
+
 /*  =============== Styles responsive to screen size ===============*/
 
 @media (max-width: 1199px) {
@@ -281,8 +341,15 @@ a:not(.btn):visited {
     font-size: 2.1em;
   }
 }
-
-@media screen and (max-width: 768px) {
+@media (max-width: 1020px) {
+  .contacts-container {
+    justify-content: center;
+  }
+  .contacts-instruction {
+    width: fit-content;
+  }
+}
+@media (max-width: 768px) {
   body {
     font-size: 16px;
   }
@@ -384,8 +451,16 @@ a:not(.btn):visited {
     border-top: none;
   }
 }
-
-@media screen and (max-width: 360px) {
+@media (max-width: 600px) {
+  .form-item-title {
+    grid-column: 1/3;
+    text-align: left;
+  }
+  .form-item-field {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 360px) {
   body {
     font-size: 14px;
   }
@@ -407,105 +482,6 @@ a:not(.btn):visited {
 }
 
 /* 
-
-.contacts {
-  background-color: #efefef;
-  padding: 50px 0 70px;
-}
-.contacts .container::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.contacts .container {
-  padding-top: 0;
-}
-.contacts-title {
-  margin-top: 0;
-  margin-bottom: 58px;
-}
-.contacts-form {
-  float: left;
-  width: 640px;
-}
-
-.contacts-form td {
-  padding-bottom: 15px;
-}
-.contacts-form td.sex {
-  padding-top: 15px;
-  padding-bottom: 25px;
-}
-
-.contacts-form .title {
-  padding-right: 10px;
-  font-weight: bold; 
-  font-size: 18px;
-  font-family: Trebuchet MS, Arial, sans-serif;
-  vertical-align: top;
-  text-align: right;
-}
-
-.contacts-form .title[id="fullname"]{
-  vertical-align: middle;
-} 
-
-.contacts-form .field {
-  width: 470px;
-}
-
-.contacts-form input[type="text"],
-.contacts-form textarea {
-  font-family: Tahoma, Arial, sans-serif;
-  font-size: 18px;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px 20px;
-  border: 2px solid #a7a7a7;
-}
-
-.contacts-form input[type="text"]{  
-  min-height: 55px;
-}
-.contacts-form textarea {
-  min-height: 105px;
-  resize: none;
-}
-.contacts-form .sex {
-  margin: 0 35px 0 10px;
-}
-
-.contacts-form input[type="radio"] {
-  margin-right: 30px;
-}
-.contacts-form .btn {
-  width: 100%;
-  border: none;
-  padding: 24px 90px;
-  margin-top: 5px;
-}
-
-.contacts-instruction {
-  float:  right;
-  width: 320px;
-}
-
-.contacts-instruction h3 {
-  margin: 0;
-  line-height: 30px;  
-  padding-top: 0;
-  padding-bottom: 20px;
-}
-
-.contacts-instruction p {
-  padding-bottom: 30px;
-}
-
-.contacts-instruction p.contacts-alert {
-  padding-top: 10px;
-  padding-bottom: 0;
-}
 .main-footer {
   padding-top: 65px;
   padding-bottom: 75px;

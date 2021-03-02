@@ -96,7 +96,7 @@
 
         <section id="contacts" class="grey-back">
             <div class="contacts-container container">
-                <h2 class="contacts-heading heading">Обратная связь</h2>
+            <h2 class="contacts-heading heading">Обратная связь</h2>
                 <form id="form" class="contacts-form" action="https://www.freecodecamp.com/email-submit" method="post">
                     <div class="form-group">
                         <label for="fullname" class="fullname form-item-title bold">ФИО:</label>
@@ -110,9 +110,12 @@
                     </div>
                     <div class="form-group">
                         <p class="gender form-item-title bold">Пол:</p>
-                        <label><input type="radio" id="man" name="gender" value="man" checked>
-                            Мужской</label>
-                        <label><input type="radio" id="woman" name="gender" value="woman"> Женский</label>
+                        <div class="form-item-field radio">
+                            <label><input type="radio" id="man" name="gender" value="man" checked>
+                                Мужской</label>
+                            <label><input type="radio" id="woman" name="gender" value="woman"> Женский</label>
+                        </div>
+
                     </div>
                     <div class="form-group">
                         <label for="message" class="message form-item-title bold">Доп.текст:</label>
@@ -121,13 +124,14 @@
                     </div>
                     <div class="form-group">
                         <div class="gender form-item-title"></div>
-                        <input id="submit" type="submit" class="contacts-form-btn btn" value="Отправить">
+                        <input id="submit" type="submit" class="contacts-form-btn form-item-field btn" value="Отправить">
                     </div>
                 </form>
 
                 <div class="contacts-instruction">
                     <h3 class="contacts-instruction-heading">Заинтересовались обучением на нашей кафедре?</h3>
-                    <p class="contacts-instruction-description">Заполните короткую форму обратной связи и отправьте нам.
+                    <p class="contacts-instruction-description">Заполните короткую форму обратной связи и отправьте
+                        нам.
                     </p>
                     <p class="contacts-instruction-description">Мы подготовим для вас индивидуальное предложение и
                         выйдем на
