@@ -48,7 +48,6 @@ main {
 }
 
 .grey-back {
-  line-height: 1.33em;
   color: #555555;
   background-color: #efefef;
 }
@@ -208,6 +207,42 @@ a:not(.btn):visited {
   border: none;
 }
 
+/*  =============== Features styles ===============*/
+
+.features-item {
+  max-width: 320px;
+  line-height: 1.33em;
+  text-align: center;
+}
+
+.features-icon {
+  width: 80px;
+  height: 70px;
+  margin: 0 auto 1.1em;
+  background-size: contain;
+}
+
+.features-icon-schedule {
+  background: url("../img/schedule.png") no-repeat;
+}
+
+.features-icon-practice {
+  background: url("../img/practice.png") no-repeat;
+}
+
+.features-icon-work {
+  background: url("../img/work.png") no-repeat;
+}
+
+.features-name {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+.features-description {
+  margin-bottom: 0;
+}
+
 /*  =============== Styles responsive to screen size ===============*/
 
 @media (max-width: 1199px) {
@@ -220,7 +255,10 @@ a:not(.btn):visited {
   body {
     font-size: 16px;
   }
-  /* Header */
+  .container:not(.header-container) {
+    justify-content: center;
+  }
+  /* == Header == */
   .header-container {
     height: 60px;
   }
@@ -278,9 +316,8 @@ a:not(.btn):visited {
   .header-burger.active span {
     transform: scale(0);
   }
-  /* Promo */
+  /* == Promo == */
   .promo {
-    justify-content: center;
     align-content: space-evenly;
     gap: 0;
   }
@@ -293,6 +330,12 @@ a:not(.btn):visited {
     width: 100%;
     height: 60vw;
   }
+  /* == Features == */
+  .features-icon {
+    width: 2.2em;
+    height: 1.9em;
+    background-size: contain;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -304,6 +347,12 @@ a:not(.btn):visited {
   }
 }
 
+@media (min-width: 768px) {
+  .features-container {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (min-width: 1440px) {
   .promo {
     max-height: 900px;
@@ -311,58 +360,6 @@ a:not(.btn):visited {
 }
 
 /* 
-.features {
-  background-color: #efefef;
-  padding: 50px 0;
-}
-
-.features .container::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.features-title,
-.contacts-instruction h3 {
-  font-family: Trebuchet MS, Arial, sans-serif;
-  font-size: 22px;
-  margin-bottom: 25px;
-}
-
-.features p,
-.contacts-instruction p {
-  color: #565656;
-  margin: 0;
-}
-
-.features-item {
-  float: left;
-  width: 310px;
-  text-align: center;
-  margin-right: 30px;
-  padding: 0 5px;
-}
-.features-item:last-child {
-  margin-right: 0;
-}
-
-.features-icon {
-  width: 80px;
-  height: 70px;
-  margin: 0 auto 20px;
-}
-
-.features-icon-schedule {
-  background: url("../img/schedule.png") no-repeat;
-}
-
-.features-icon-practice {
-  background: url("../img/practice.png") no-repeat;
-}
-
-.features-icon-work {
-  background: url("../img/work.png") no-repeat;
-}
-
 .education {
   background-color: #ffffff;
   padding: 13px 0;
